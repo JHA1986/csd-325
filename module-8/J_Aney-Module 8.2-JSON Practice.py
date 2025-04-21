@@ -3,6 +3,10 @@
 # Import .json module - JHA
 import json
 
+# Open and load the .json file into a python list - JHA
+with open('student.json', 'r') as file:
+    students = json.load(file)
+
 # Create a function using for loop to grab all the data from the .json file - JHA
 def print_student(student):
     for student in students:
@@ -12,10 +16,6 @@ def print_student(student):
         email = student.get('Email')
 
         print(f'{last_name}, {first_name}: ID = {student_id}, Email = {email}')
-
-# Open and load the json file into a python list - JHA
-with open('student.json', 'r') as file:
-    students = json.load(file)
 
 # Display original student list to user. - JHA
 print("Original Student List")
